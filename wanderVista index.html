@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Destination</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Font as our font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <!-- Navbar links to different sections of the page -->
+        <li><a href="#nature">Nature</a></li>
+        <li><a href="#shopping">Shopping</a></li>
+        <li><a href="#historical">Historical Sites</a></li>
+        <li><a href="#adventure">Adventure</a></li>
+        <li><a href="#relaxation">Relaxation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Map Overview -->
+  <section class="hero">
+    <h1>Explore Our Destination</h1>
+    <p>Discover attractions and activities tailored to your interests.</p>
+    <div class="map-container">
+      <!-- Map area with interactive hotspots -->
+      <div class="map">
+        <!-- Example hotspot with image, label, and accessible focus/tab interaction -->
+        <div class="hotspot" id="spot1" tabindex="0" aria-label="Historical Site - Museum">
+          <img src="museum.jpg" alt="Museum">
+          <p>Museum</p>
+        </div>
+        <div class="hotspot" id="spot2" tabindex="0" aria-label="Shopping District">
+          <img src="shopping.jpg" alt="Shopping District">
+          <p>Shopping District</p>
+        </div>
+        <!-- Add more hotspots as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filters for Activities by Theme -->
+  <section class="categories">
+    <h2>Activities by Theme</h2>
+    <!-- Accessible filter buttons for theme-based activity grouping -->
+    <div class="filter family" id="family" tabindex="0">Family-Friendly</div>
+    <div class="filter adventure" id="adventure" tabindex="0">Adventure</div>
+    <div class="filter relaxation" id="relaxation" tabindex="0">Relaxation</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Tourist Destination - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
