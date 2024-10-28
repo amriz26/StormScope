@@ -24,12 +24,14 @@ body {
     text-align: center;
     text-decoration: none;
     list-style-type: none;
-    border: 2px black;
+    border: 2px black; /*this isnt working*/
 }
+
+/*need to start flexbox here, it should make layout easier too*/
 
 .hero {
     padding-left: 3rem;
-    padding-right: 3rem;
+    padding-right: 3rem; /* i want there to be space on either side, equal, so its not just pushed up the left*/
 
 }
 
