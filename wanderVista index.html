@@ -7,7 +7,7 @@
   <title>Tourist Destination</title>
   <!-- link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
-  <!-- google ffont for readability -->
+  <!-- Google Font as our font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,68 +25,21 @@
     </nav>
   </header>
 
-  <!-- main content wrapper -->
-  <div class="content-wrapper">
-
-    <!-- hero section w/ intro -->
-    <section class="hero">
-      <h1>Explore Our Destination</h1>
-      <p>
-        Discover a world of attractions and activities designed to cater to every interest. 
-        Use the interactive map below to explore points of interest in categories like 
-        <strong>Nature</strong>, <strong>Shopping</strong>, and <strong>Historical Sites</strong>. 
-        Easily navigate through activities grouped by themes such as <strong>Adventure</strong> 
-        and <strong>Relaxation</strong>.
-      </p>
-    </section>
-
-    <!-- map section w/ interactive hotspots -->
-    <div class="map-section">
-      <div class="map-container">
-        <div class="map">
-          
-          <!-- hotspot 1 with checkbox for CSS Only -->
-          <div class="hotspot" id="spot1" tabindex="0" aria-label="Historical Site - Museum">
-            <input type="checkbox" id="museum" />
-            <label for="museum">
-              <img src="museum.jpg" alt="Museum">
-              <p><strong>Museum</strong></p>
-            </label>
-            <div class="modal">
-              <img src="museum.jpg" alt="Museum Interior">
-              <p>A historical museum showcasing the region's heritage.</p>
-              <p><a href="https://museum-website.com" target="_blank">Visit Museum Website</a></p>
-            </div>
-          </div>
-
-          <!-- hotspot 2 with checkbox -->
-          <div class="hotspot" id="spot2" tabindex="0" aria-label="Shopping District">
-            <input type="checkbox" id="shopping" />
-            <label for="shopping">
-              <img src="shopping.jpg" alt="Shopping District">
-              <p><strong>Shopping District</strong></p>
-            </label>
-            <div class="modal">
-              <img src="shopping.jpg" alt="Shopping Area">
-              <p>A popular shopping area with a variety of stores and dining options.</p>
-              <p><a href="https://shopping-district.com" target="_blank">Explore Shopping District</a></p>
-            </div>
-          </div>
-
-          <!-- hotspot 3 with checkbox -->
-          <div class="hotspot" id="spot3" tabindex="0" aria-label="Nature Park">
-            <input type="checkbox" id="nature-park" />
-            <label for="nature-park">
-              <img src="nature-park.jpg" alt="Nature Park">
-              <p><strong>Nature Park</strong></p>
-            </label>
-            <div class="modal">
-              <img src="nature-park.jpg" alt="Scenic Nature Park">
-              <p>A peaceful park offering hiking trails and scenic views.</p>
-              <p><a href="https://nature-park.com" target="_blank">Learn More about Nature Park</a></p>
-            </div>
-          </div>
-          
+  <!-- hero section with map overview -->
+  <section class="hero">
+    <h1>Explore Our Destination</h1>
+    <p>Discover attractions and activities tailored to your interests.</p>
+    <div class="map-container">
+      <!-- map area w/ interactive hotspots -->
+      <div class="map">
+        <!-- example hotspot w/ image, label, and accessible focus/tab interaction -->
+        <div class="hotspot" id="spot1" tabindex="0" aria-label="Historical Site - Museum">
+          <img src="museum.jpg" alt="Museum">
+          <p>Museum</p>
+        </div>
+        <div class="hotspot" id="spot2" tabindex="0" aria-label="Shopping District">
+          <img src="shopping.jpg" alt="Shopping District">
+          <p>Shopping District</p>
         </div>
       </div>
     </div>
@@ -109,14 +62,10 @@
 
     </section>
 
-  </div> 
-
-  <!-- footer wwrapper -->
-  <div class="footer-wrapper">
-    <footer>
-      <p>&copy; 2024 Tourist Destination - All Rights Reserved</p>
-    </footer>
-  </div>
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2024 Tourist Destination - All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
