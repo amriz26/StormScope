@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- wanted to mention that for <meta> tags I did research and leanred about them recently and used them once over the summer and decided to implement them for mobile aspedct of the web page !  -->
+  <meta charset="UTF-8">  <!--  character encoding so the page supports a wide range of characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sets up the page to be responsive / scale on mobile devices -->
   <title>Tourist Destination</title>
-  <!-- Link to external CSS file -->
+  <!-- link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Google Font as our font -->
+  <!-- google ffont for readability -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +16,6 @@
   <header class="navbar">
     <nav>
       <ul>
-        <!-- navbar links to different sectionss of the page -->
         <li><a href="#nature">Nature</a></li>
         <li><a href="#shopping">Shopping</a></li>
         <li><a href="#historical">Historical Sites</a></li>
@@ -25,40 +25,99 @@
     </nav>
   </header>
 
-  <!-- hero section with map overview -->
-  <section class="hero">
-    <h1>Explore Our Destination</h1>
-    <p>Discover attractions and activities tailored to your interests.</p>
-    <div class="map-container">
-      <!-- map area w/ interactive hotspots -->
-      <div class="map">
-        <!-- example hotspot w/ image, label, and accessible focus/tab interaction -->
-        <div class="hotspot" id="spot1" tabindex="0" aria-label="Historical Site - Museum">
-          <img src="museum.jpg" alt="Museum">
-          <p>Museum</p>
+  <!-- main content wrapper -->
+  <div class="content-wrapper">
+
+    <!-- hero section w/ intro -->
+    <section class="hero">
+      <h1>Explore Our Destination</h1>
+      <p>
+        Discover a world of attractions and activities designed to cater to every interest. 
+        Use the interactive map below to explore points of interest in categories like 
+        <strong>Nature</strong>, <strong>Shopping</strong>, and <strong>Historical Sites</strong>. 
+        Easily navigate through activities grouped by themes such as <strong>Adventure</strong> 
+        and <strong>Relaxation</strong>.
+      </p>
+    </section>
+
+    <!-- map section w/ interactive hotspots -->
+    <div class="map-section">
+      <div class="map-container">
+        <div class="map">
+          
+          <!-- hotspot 1 with checkbox for CSS Only -->
+          <div class="hotspot" id="spot1" tabindex="0" aria-label="Historical Site - Museum">
+            <input type="checkbox" id="museum" />
+            <label for="museum">
+              <img src="museum.jpg" alt="Museum">
+              <p><strong>Museum</strong></p>
+            </label>
+            <div class="modal">
+              <img src="museum.jpg" alt="Museum Interior">
+              <p>A historical museum showcasing the region's heritage.</p>
+              <p><a href="https://museum-website.com" target="_blank">Visit Museum Website</a></p>
+            </div>
+          </div>
+
+          <!-- hotspot 2 with checkbox -->
+          <div class="hotspot" id="spot2" tabindex="0" aria-label="Shopping District">
+            <input type="checkbox" id="shopping" />
+            <label for="shopping">
+              <img src="shopping.jpg" alt="Shopping District">
+              <p><strong>Shopping District</strong></p>
+            </label>
+            <div class="modal">
+              <img src="shopping.jpg" alt="Shopping Area">
+              <p>A popular shopping area with a variety of stores and dining options.</p>
+              <p><a href="https://shopping-district.com" target="_blank">Explore Shopping District</a></p>
+            </div>
+          </div>
+
+          <!-- hotspot 3 with checkbox -->
+          <div class="hotspot" id="spot3" tabindex="0" aria-label="Nature Park">
+            <input type="checkbox" id="nature-park" />
+            <label for="nature-park">
+              <img src="nature-park.jpg" alt="Nature Park">
+              <p><strong>Nature Park</strong></p>
+            </label>
+            <div class="modal">
+              <img src="nature-park.jpg" alt="Scenic Nature Park">
+              <p>A peaceful park offering hiking trails and scenic views.</p>
+              <p><a href="https://nature-park.com" target="_blank">Learn More about Nature Park</a></p>
+            </div>
+          </div>
+          
         </div>
-        <div class="hotspot" id="spot2" tabindex="0" aria-label="Shopping District">
-          <img src="shopping.jpg" alt="Shopping District">
-          <p>Shopping District</p>
-        </div>
-        <!-- we can more hotspots if needed  -->
       </div>
     </div>
-  </section>
 
-  <!--cCategory filters for activities by theme -->
-  <section class="categories">
-    <h2>Activities by Theme</h2>
-    <!-- accessible filter buttons for theme based activityy grouping -->
-    <div class="filter family" id="family" tabindex="0">Family-Friendly</div>
-    <div class="filter adventure" id="adventure" tabindex="0">Adventure</div>
-    <div class="filter relaxation" id="relaxation" tabindex="0">Relaxation</div>
-  </section>
+    <!-- category filters for activities by theme -->
+    <section class="categories">
+      <h2>Activities by Theme</h2>
+      <p>Select a theme to view activities that match your interests, from thrilling adventures to relaxing retreats.</p>
 
-  <!-- footer -->
-  <footer>
-    <p>&copy; 2024 Tourist Destination - All Rights Reserved</p>
-  </footer>
+      <!-- accessible filter buttons for themee based activity grouping -->
+      <div class="filter adventure" id="adventure" tabindex="0">
+        <strong>Adventure</strong> - Exciting activities for thrill-seekers.
+        <img src="adventure.jpg" alt="Adventure activities image">
+      </div>
+
+      <div class="filter relaxation" id="relaxation" tabindex="0">
+        <strong>Relaxation</strong> - Perfect spots to unwind and relax.
+        <img src="relaxation.jpg" alt="Relaxation activities image">
+      </div>
+
+    </section>
+
+  </div> 
+
+  <!-- footer wwrapper -->
+  <div class="footer-wrapper">
+    <footer>
+      <p>&copy; 2024 Tourist Destination - All Rights Reserved</p>
+    </footer>
+  </div>
 
 </body>
 </html>
+
