@@ -85,6 +85,15 @@ body {
   background-size: cover;
 }
 
+.adventure {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem; /* the sections were right next to each other, added some seperation*/
+}
+
+footer {
+  padding-bottom: 0;
+}
+
 .hero h1 {
   font-size: 3rem;
   color: #2c3e50;
